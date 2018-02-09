@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="BankCardKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fl5-O5-Z2b">
+                                <rect key="frame" x="37.666666666666657" y="76" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="atU-Co-Zq4"/>
+                                    <constraint firstAttribute="width" constant="300" id="xnx-s2-hpm"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="cardNumberTextEditing:" destination="vXZ-lx-hvc" eventType="editingChanged" id="S1C-eq-Jd0"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5o-bd-R5k">
+                                <rect key="frame" x="37" y="118" width="301" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="mVc-eH-aqo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7b3-za-T1W">
+                                <rect key="frame" x="37" y="159" width="180" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="expirationDateTextEditing:" destination="vXZ-lx-hvc" eventType="editingChanged" id="K6R-v6-U4c"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbt-I4-5Kv">
+                                <rect key="frame" x="241" y="159" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="verificationCodeTextEditing:" destination="vXZ-lx-hvc" eventType="editingChanged" id="i8B-nE-5OB"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7b3-za-T1W" firstAttribute="top" secondItem="V5o-bd-R5k" secondAttribute="bottom" constant="20" id="9x7-mg-Jnd"/>
+                            <constraint firstItem="vbt-I4-5Kv" firstAttribute="height" secondItem="7b3-za-T1W" secondAttribute="height" id="Eve-ty-AKg"/>
+                            <constraint firstItem="Fl5-O5-Z2b" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="32" id="HD4-0h-5CN"/>
+                            <constraint firstItem="7b3-za-T1W" firstAttribute="width" secondItem="Fl5-O5-Z2b" secondAttribute="width" multiplier="0.6" id="Iaj-MQ-6iE"/>
+                            <constraint firstItem="vbt-I4-5Kv" firstAttribute="trailing" secondItem="Fl5-O5-Z2b" secondAttribute="trailing" id="ROR-J1-XZl"/>
+                            <constraint firstItem="V5o-bd-R5k" firstAttribute="leading" secondItem="Fl5-O5-Z2b" secondAttribute="leading" id="UiF-Uv-hvd"/>
+                            <constraint firstItem="Fl5-O5-Z2b" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="eRI-Ug-dOk"/>
+                            <constraint firstItem="7b3-za-T1W" firstAttribute="leading" secondItem="Fl5-O5-Z2b" secondAttribute="leading" id="eX5-Gv-2rG"/>
+                            <constraint firstItem="vbt-I4-5Kv" firstAttribute="top" secondItem="7b3-za-T1W" secondAttribute="top" id="iPd-eD-5GC"/>
+                            <constraint firstItem="vbt-I4-5Kv" firstAttribute="leading" secondItem="7b3-za-T1W" secondAttribute="trailing" constant="24" id="lYw-zW-w4k"/>
+                            <constraint firstItem="V5o-bd-R5k" firstAttribute="top" secondItem="Fl5-O5-Z2b" secondAttribute="bottom" constant="2" id="o6G-Yt-KA3"/>
+                            <constraint firstItem="V5o-bd-R5k" firstAttribute="trailing" secondItem="Fl5-O5-Z2b" secondAttribute="trailing" id="yhb-c8-ku7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardBrandLabel" destination="V5o-bd-R5k" id="8xb-ow-clt"/>
+                        <outlet property="cardNumberTextField" destination="Fl5-O5-Z2b" id="eWD-Et-h5b"/>
+                        <outlet property="expirationDateTextField" destination="7b3-za-T1W" id="Weg-ep-u7m"/>
+                        <outlet property="verificationCodeTextField" destination="vbt-I4-5Kv" id="TQt-B3-TJf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="28.817733990147783"/>
+        </scene>
+    </scenes>
+</document>

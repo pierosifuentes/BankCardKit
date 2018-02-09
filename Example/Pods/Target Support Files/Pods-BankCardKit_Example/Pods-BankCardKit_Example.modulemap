@@ -1,0 +1,6 @@
+framework module Pods_BankCardKit_Example {
+  umbrella header "Pods-BankCardKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'BankCardKit_Example' do
+  pod 'BankCardKit', :path => '../'
+
+  target 'BankCardKit_Tests' do
+    inherit! :search_paths
+
+    pod 'Quick', '~> 1.2.0'
+    pod 'Nimble', '~> 7.0.2'
+  end
+end
