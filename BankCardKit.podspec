@@ -30,7 +30,7 @@ BankCardKit is an iOS framework which gives the right tools for handle work with
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'BankCardKit/Classes/**/*'
+  s.source_files = 'BankCardKit/Classes/**/*.swift'
   
   # s.resource_bundles = {
   #   'BankCardKit' => ['BankCardKit/Assets/*.png']
