@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'BankCardKit'
   s.version          = '0.1.0'
-  s.summary          = 'Card tools and manager framework'
+  s.summary          = 'Credit and Debit Card framework'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
