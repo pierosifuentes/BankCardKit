@@ -9,9 +9,15 @@ env:
         - LANG=en_US.UTF-8
         - WORKSPACE=BankCardKit.xcworkspace
 #        - IOS_FRAMEWORK_SCHEME="BankCardKit iOS"
+#- MACOS_FRAMEWORK_SCHEME="Alamofire macOS"
+#- TVOS_FRAMEWORK_SCHEME="Alamofire tvOS"
+#- WATCHOS_FRAMEWORK_SCHEME="Alamofire watchOS"
         - EXAMPLE_SCHEME="BankCardKit-Example"
+
+before_install:
+- gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/BankCardKit.xcworkspace -scheme BankCardKit-Example -sdk iphonesimulator10.0 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail
 - xcodebuild -version
 - xcodebuild -showsdks
 - pod lib lint
